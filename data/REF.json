@@ -1,0 +1,356 @@
+[
+    {
+        "competition": "AMC_8",
+        "competition_id": "2016_AMC_8_Problems",
+        "problem_id": 1,
+        "difficulty": 1.5,
+        "problem": "What is the largest power of $2$ that is a divisor of $13^4 - 11^4$?\n$\\textbf{(A)}\\mbox{ }8\\qquad \\textbf{(B)}\\mbox{ }16\\qquad \\textbf{(C)}\\mbox{ }32\\qquad \\textbf{(D)}\\mbox{ }64\\qquad \\textbf{(E)}\\mbox{ }128$",
+        "solutions": {
+            "1": "First, we use difference of squares on $13^4 - 11^4 = (13^2)^2 - (11^2)^2$ to get $13^4 - 11^4 = (13^2 + 11^2)(13^2 - 11^2)$. Using difference of squares again and simplifying, we get $(169 + 121)(13+11)(13-11) = 290 \\cdot 24 \\cdot 2 = (2\\cdot 8 \\cdot 2) \\cdot (3 \\cdot 145)$. Realizing that we don't need the right-hand side because it doesn't contain any factor of 2, we see that the greatest power of $2$ that is a divisor $13^4 - 11^4$ is $\\boxed{\\textbf{(C)}\\ 32}$.",
+            "2": "Just like in the above solution, we use the difference-of-squares factorization, but only once to get $13^4-11^4=(13^2-11^2)(13^2+11^2).$ We can then compute that this is equal to $48\\cdot290.$ Note that $290=2\\cdot145$ (we don't need to factorize any further as $145$ is already odd) thus the largest power of $2$ that divides $290$ is only $2^1=2,$ while $48=2^4\\cdot3,$ so the largest power of $2$ that divides $48$ is $2^4=16.$ Hence, the largest power of $2$ that is a divisor of $13^4-11^4$ is $2\\cdot16=\\boxed{\\textbf{(C)}~32}.$",
+            "3": "Let $n=13^4-11^4.$ We wish to find the largest power of $2$ that divides $n$.\nDenote $v_p(k)$ as the largest exponent of $p$ in the prime factorization of $n$. In this problem, we have $p=2$. \nBy the Lifting the Exponent Lemma on $n$, \n\\[v_2(13^4-11^4)=v_2(13-11)+v_2(4)+v_2(13+11)-1\\]\n\\[=v_2(2)+v_2(4)+v_2(24)-1\\]\n\\[=1+2+3-1=5.\\]\nTherefore, exponent of the largest power of $2$ that divids $13^4-11^4$ is $5,$ so the largest power of $2$ that divides this number is $2^5=\\boxed{\\textbf{(C)} 32}$.",
+            "4": "We can simply take 13 to the 4th power, which is 28561. We subtract that by 11 to the 4th power, which is 14641 (You can use Pascal's Triangle to find this). Finally, subtract the numbers to get 13920. \nTo test the options, since we need the largest one, we can go from top down. Testing, we see that both D and E are decimals,\nand 32 works. So, our answer is $\\boxed{\\textbf{(C)}~32}.$"
+        }
+    },
+    {
+        "competition": "AMC_8",
+        "competition_id": "2019_AMC_8_Problems",
+        "problem_id": 34,
+        "difficulty": 1.5,
+        "problem": "How many different real numbers $x$ satisfy the equation \\[(x^{2}-5)^{2}=16?\\]\n$\\textbf{(A) }0\\qquad\\textbf{(B) }1\\qquad\\textbf{(C) }2\\qquad\\textbf{(D) }4\\qquad\\textbf{(E) }8$",
+        "solutions": {
+            "1": "We have that $(x^2-5)^2 = 16$ if and only if $x^2-5 = \\pm 4$. If $x^2-5 = 4$, then $x^2 = 9 \\implies x = \\pm 3$, giving 2 solutions. If $x^2-5 = -4$, then $x^2 = 1 \\implies x = \\pm 1$, giving 2 more solutions. All four of these solutions work, so the answer is $\\boxed{\\textbf{(D) }4}$. Further, the equation is a  in $x$, so by the , there can be at most four real solutions.",
+            "2": "We can expand $(x^2-5)^2$ to get $x^4-10x^2+25$, so now our equation is $x^4-10x^2+25=16$. Subtracting $16$ from both sides gives us $x^4-10x^2+9=0$. Now, we can factor the left hand side to get $(x^2-9)(x^2-1)=0$. If $x^2-9$ and/or $x^2-1$ equals $0$, then the whole left side will equal $0$. Since the solutions can be both positive and negative, we have $4$ solutions: $-3,3,-1,1$ (we can find these solutions by setting $x^2-9$ and $x^2-1$ equal to $0$ and solving for $x$). So, the answer is $\\boxed{\\textbf{(D) }4}$. ",
+            "3": "Subtract 16 from both sides and factor using difference of squares: \n\n\\[(x^2 - 5)^2 = 16\\]\n\\[(x^2 - 5)^2 - 16 =0\\]\n\\[(x^2 - 5)^2 - 4^2 = 0\\]\n\\[[(x^2 - 5)-4][(x^2 - 5) + 4] = 0\\]\n\\[(x^2 - 9)(x^2 - 1) =0\\]\n\\[(x+3)(x-3)(x+1)(x-1) = 0\\]\n\nQuite obviously, this equation has $\\boxed{\\textbf{(D) }4}$ solutions. \n"
+        }
+    },
+    {
+        "competition": "AMC_8",
+        "competition_id": "1996_AJHSME_Problems",
+        "problem_id": 39,
+        "difficulty": 1,
+        "problem": "How many positive factors of 36 are also multiples of 4?\n$\\text{(A)}\\ 2 \\qquad \\text{(B)}\\ 3 \\qquad \\text{(C)}\\ 4 \\qquad \\text{(D)}\\ 5 \\qquad \\text{(E)}\\ 6$",
+        "solutions": {
+            "1": "The factors of $36$ are $1, 2, 3, 4, 6, 9, 12, 18,$ and $36$.\nThe multiples of $4$ up to $36$ are $4, 8, 12, 16, 20, 24, 28, 32$ and $36$.\nOnly $4, 12$ and $36$ appear on both lists, so the answer is $3$, which is option $\\boxed{B}$.",
+            "2": "$36 = 4^1 \\cdot 3^2$. All possible factors of $36$ will be here, except for ones divisible by $2$ and not by $4$. $(1+1)\\cdot (2+1) = 6$. Subtract factors not divisible by $4$, which are $1$, $3^1$, and $3^2$. $6-3=3$, which is $\\boxed{B}$.",
+            "3": "Divide $36$ by $4$, and the remaining factors, when multiplied by $4$, will be factors of $36$.\n$36 \\div 4 = 9$, which has $3$ factors, giving us option $\\boxed{B}$."
+        }
+    },
+    {
+        "competition": "AMC_10",
+        "competition_id": "2002_AMC_10A_Problems",
+        "problem_id": 53,
+        "difficulty": 2,
+        "problem": "There are 3 numbers A, B, and C, such that $1001C - 2002A = 4004$, and $1001B + 3003A = 5005$. What is the average of A, B, and C?\n$\\textbf{(A)}\\ 1 \\qquad \\textbf{(B)}\\ 3 \\qquad \\textbf{(C)}\\ 6 \\qquad \\textbf{(D)}\\ 9 \\qquad \\textbf{(E) }\\text{Not uniquely determined}$",
+        "solutions": {
+            "1": "Notice that we don't need to find what $A, B,$ and $C$ actually are, just their average. In other words, if we can find $A+B+C$, we will be done. \nAdding up the equations gives $1001(A+B+C)=9009=1001(9)$ so $A+B+C=9$ and the average is $\\frac{9}{3}=3$. Our answer is $\\boxed{\\textbf{(B) }3}$.",
+            "2": "As there are only 2 equations and 3 variables, just set one of the variables to something convenient, like 0. Setting C as 0, we get A is -2, and B is 11 by substitution. By basic arithmetic the average is 3=>B",
+            "3": "Start by isolating $B$ and $C$ in both of the equations, in order to represent the variables $C$ and $B$ in terms of A. Ending up with the two equations $C = 2A +4$ and $B = -3A + 5$, we have to calculate the value of the expression $\\frac{A+B+C}{3}$. Plugging in $2A + 4$ for $C$ and $-3A + 5$ for $B$, we add them up and end up with a value of 9. Dividing 9 by 3 to compute the average, we get our answer of $\\boxed{\\textbf{(B) }3}$."
+        }
+    },
+    {
+        "competition": "AMC_10",
+        "competition_id": "2001_AMC_10_Problems",
+        "problem_id": 80,
+        "difficulty": 2,
+        "problem": "Pat wants to buy four donuts from an ample supply of three types of donuts: glazed, chocolate, and powdered. How many different selections are possible?\n$\\textbf{(A)}\\ 6 \\qquad \\textbf{(B)}\\ 9 \\qquad \\textbf{(C)}\\ 12 \\qquad \\textbf{(D)}\\ 15 \\qquad \\textbf{(E)}\\ 18$",
+        "solutions": {
+            "1": "Let's use stars and bars.\nLet the donuts be represented by $O$s. We wish to find all possible combinations of glazed, chocolate, and powdered donuts that give us $4$ in all. The four donuts we want can be represented as $OOOO$. Notice that we can add two \"dividers\" to divide the group of donuts into three different kinds; the first will be glazed, second will be chocolate, and the third will be powdered. For example, $O|OO|O$ represents one glazed, two chocolate, and one powdered. We have six objects in all, and we wish to turn two into dividers, which can be done in $\\binom{6}{2}=15$ ways. Our answer is hence $\\boxed{\\textbf{(D)}\\ 15}$. Notice that this can be generalized to get the stars and bars (balls and urns) identity.",
+            "2": "Similar to Solution 1, we can generalize the problem by using the stars and bars formula, yielding an answer of $\\dbinom{4+3-1}{3-1}=\\dbinom{6}{2}=\\boxed{\\textbf{(D)}\\ 15}$.",
+            "3": "Simple casework works here as well:\nSet up the following ratios:\n\\[4:0:0\\]\n\\[3:1:0\\]\n\\[2:2:0\\]\n\\[2:1:1\\]\nIn three of these cases we see that there are two of the same ratios (so like two boxes would have $0$), and so if we swapped those two donuts, we would have the same case. Thus we get $\\frac{3!}{2!1!}$ for those $3$ (You can also set it up and logically symmetry applies). For the other case where each ratio of donuts is different, we get the normal $\\binom{4}{3}=6.$ Thus, our answer is $3 \\cdot 3+6 = \\boxed{\\textbf{(D) }15}$."
+        }
+    },
+    {
+        "competition": "AMC_10",
+        "competition_id": "2021_AMC_10A_Problems",
+        "problem_id": 85,
+        "difficulty": 1,
+        "problem": "Portia's high school has $3$ times as many students as Lara's high school. The two high schools have a total of $2600$ students. How many students does Portia's high school have?\n$\\textbf{(A)} ~600 \\qquad\\textbf{(B)} ~650 \\qquad\\textbf{(C)} ~1950 \\qquad\\textbf{(D)} ~2000\\qquad\\textbf{(E)} ~2050$",
+        "solutions": {
+            "1": "The following system of equations can be formed with $P$ representing the number of students in Portia's high school and $L$ representing the number of students in Lara's high school:\n\\begin{align*} P&=3L, \\\\ P+L&=2600. \\end{align*}\nSubstituting $P=3L$ gives $4L=2600.$ Solving for $L$ gives $L=650.$ Since we need to find $P,$ we multiply $650$ by $3$ to get $P=\\boxed{\\textbf{(C)} ~1950}.$",
+            "2": "Suppose Lara's high school has $x$ students, so Portia's high school has $3x$ students. We have $x+3x=2600,$ or $4x=2600.$ The answer is \\[3x=2600\\cdot\\frac 34=650\\cdot3=\\boxed{\\textbf{(C)} ~1950}.\\]",
+            "3": "Clearly, $2600$ is $4$ times the number of students in Lara's high school. Therefore, Lara's high school has $2600\\div4=650$ students, and Portia's high school has $650\\cdot3=\\boxed{\\textbf{(C)} ~1950}$ students.",
+            "4": "The number of students in Portia's high school must be a multiple of $3.$ This eliminates $\\textbf{(B)},\\textbf{(D)},$ and $\\textbf{(E)}.$ Since $\\textbf{(A)}$ is too small (as it is clear that $600+\\frac{600}{3}<2600$), we are left with $\\boxed{\\textbf{(C)} ~1950}.$"
+        }
+    },
+    {
+        "competition": "AMC_12",
+        "competition_id": "2018_AMC_12A_Problems",
+        "problem_id": 106,
+        "difficulty": 2,
+        "problem": "For positive integers $m$ and $n$ such that $m+10<n+1$, both the mean and the median of the set $\\{m, m+4, m+10, n+1, n+2, 2n\\}$ are equal to $n$. What is $m+n$?\n$\\textbf{(A)}20\\qquad\\textbf{(B)}21\\qquad\\textbf{(C)}22\\qquad\\textbf{(D)}23\\qquad\\textbf{(E)}24$",
+        "solutions": {
+            "1": "The mean and median are \\[\\frac{3m+4n+17}{6}=\\frac{m+n+11}{2}=n,\\]so $3m+17=2n$ and $m+11=n$. Solving this gives $\\left(m,n\\right)=\\left(5,16\\right)$ for $m+n=\\boxed{21}$.",
+            "2": "This is an alternate solution if you don't want to solve using algebra. First, notice that the median $n$ is the average of $m+10$ and $n+1$. Therefore, $n=m+11$, so the answer is $m+n=2m+11$, which must be odd. This leaves two remaining options: ${(B) 21}$ and ${(D) 23}$. Notice that if the answer is $(B)$, then $m$ is odd, while $m$ is even if the answer is $(D)$. Since the average of the set is an integer $n$, the sum of the terms must be even. $4+10+1+2+2n$ is odd by definition, so we know that $3m+2n$ must also be odd, thus with a few simple calculations $m$ is odd. Because all other answers have been eliminated, $(B)$ is the only possibility left. Therefore, $m+n=\\boxed{21}$. ",
+            "3": "Since the median is $n$, then $\\frac{m+10+n+1}{2} = n \\Rightarrow m+11 = n$, or $m= n-11$. Plug this in for $m$ values to get $\\frac{7n-16}{6} = n \\Rightarrow 7n-16 = 6n \\Rightarrow n= 16$. Plug it back in to get $m = 5$, thus $16 + 5 = \\boxed{21}$."
+        }
+    },
+    {
+        "competition": "AMC_12",
+        "competition_id": "2011_AMC_12A_Problems",
+        "problem_id": 111,
+        "difficulty": 4,
+        "problem": "Consider all quadrilaterals $ABCD$ such that $AB=14$, $BC=9$, $CD=7$, and $DA=12$. What is the radius of the largest possible circle that fits inside or on the boundary of such a quadrilateral?\n$\\textbf{(A)}\\ \\sqrt{15} \\qquad \\textbf{(B)}\\ \\sqrt{21} \\qquad \\textbf{(C)}\\ 2\\sqrt{6} \\qquad \\textbf{(D)}\\ 5 \\qquad \\textbf{(E)}\\ 2\\sqrt{7}$",
+        "solutions": {
+            "1": "Note as above that ABCD must be tangential to obtain the circle with maximal radius. Let $E$, $F$, $G$, and $H$ be the points on $AB$, $BC$, $CD$, and $DA$ respectively where the circle is tangent. Let $\\theta=\\angle BAD$ and $\\alpha=\\angle ADC$. Since the quadrilateral is cyclic(because we want to maximize the circle, so we set the quadrilateral to be cyclic), $\\angle ABC=180^{\\circ}-\\alpha$ and $\\angle BCD=180^{\\circ}-\\theta$. Let the circle have center $O$ and radius $r$. Note that $OHD$, $OGC$, $OFB$, and $OEA$ are right angles. \nHence $FOG=\\theta$, $GOH=180^{\\circ}-\\alpha$, $EOH=180^{\\circ}-\\theta$, and $FOE=\\alpha$. \nTherefore, $AEOH\\sim OFCG$ and $EBFO\\sim HOGD$. \nLet $x=CG$. Then $CF=x$, $BF=BE=9-x$, $GD=DH=7-x$, and $AH=AE=x+5$. Using $AEOH\\sim OFCG$ and $EBFO\\sim HOGD$ we have $r/(x+5)=x/r$, and $(9-x)/r=r/(7-x)$. By equating the value of $r^2$ from each, $x(x+5)=(7-x)(9-x)$. Solving we obtain $x=3$ so that $r=\\boxed{\\textbf{(C)}\\ 2\\sqrt{6}}$.",
+            "2": "To maximize the radius of the circle, we also need to maximize its area. To maximize the area of the circle, the quadrilateral must be tangential (have an incircle). In a tangential quadrilateral, the sum of opposite sides is equal to the semiperimeter of the quadrilateral. $14+7=12+9$, so this particular quadrilateral has an incircle. By definition, given $4$ side lengths, a cyclic quadrilateral has the maximum area of any quadrilateral with those side lengths. Therefore, to maximize the area of the quadrilateral and thus the incircle, we assume that this quadrilateral is cyclic. \nFor cyclic quadrilaterals, Brahmagupta's formula gives the area as $\\sqrt{(s-a)(s-b)(s-c)(s-d)}$ where $s$ is the semiperimeter and $a, b, c,$ and $d$ are the side lengths. Breaking it up into $4$ triangles, we see the area of a tangential quadrilateral is also equal to $r*s$. Equate these two equations.\nSubstituting $s$, the semiperimeter, and $A$, the area and solving for $r$,we get $\\boxed{\\textbf{(C)}\\ 2\\sqrt{6}}$.",
+            "3": "By Pitot's Theorem, since $AB+CD=AD+BC$, there exists a circle tangent to all four sides of quadrilateral $ABCD$. Thus, we need to find the radius of this circle.\nLet the circle be tangent to $AB$, $BC$, $CD$, and $AD$ at points $P$, $Q$, $R$, and $S$, respectively. Also, let $AP=x$. Then $AS$ also equals $x$. Let the center of the circle be $O$. Observe that $AO$ bisects angle $\\angle A$, so $\\cot\\frac{A}{2}=\\frac{x}{r}$. Moreover, $\\cot\\frac{C}{2}=\\frac{9-(14-x)}{r}=\\frac{x-5}{r}$. But $\\angle \\frac{C}{2}=90^\\circ-\\angle \\frac{A}{2}$, so $\\cot\\frac{C}{2}=\\tan\\frac{A}{2}$, and we find that $\\frac{r}{x}=\\frac{x-5}{r}$. Hence, $r^2=x(x-5)$.\nSimilarly, $\\cot\\frac{B}{2}=\\frac{14-x}{r}$, and $\\cot\\frac{D}{2}=\\frac{12-x}{r}=\\tan\\frac{B}{2}=\\frac{r}{14-x}$. Therefore, $r^2=\\frac{12-x}{14-x}$. Putting this together with the above equation yields \\[(12-x)(14-x)=x(x-5)\\]\\[\\Longrightarrow x^2-26x+168=x^2-5x\\]\\[\\Longrightarrow 21x=168\\]\\[\\Longrightarrow x=8.\\] Thus, $r^2=8(8-5)=8(3)=24$, and $r=\\boxed{\\textbf{(C)}\\ 2\\sqrt{6}}$."
+        }
+    },
+    {
+        "competition": "AMC_12",
+        "competition_id": "2014_AMC_12A_Problems",
+        "problem_id": 129,
+        "difficulty": 2,
+        "problem": "Walking down Jane Street, Ralph passed four houses in a row, each painted a different color. He passed the orange house before the red house, and he passed the blue house before the yellow house. The blue house was not next to the yellow house. How many orderings of the colored houses are possible?\n$\\textbf{(A)}\\ 2\\qquad\\textbf{(B)}\\ 3\\qquad\\textbf{(C)}\\ 4\\qquad\\textbf{(D)}\\ 5\\qquad\\textbf{(E)}\\ 6$",
+        "solutions": {
+            "1": "Let's use casework on the yellow house. The yellow house $(\\text{Y})$ is either the $3^\\text{rd}$ house or the last house.\nCase 1: $\\text{Y}$ is the $3^\\text{rd}$ house.\nThe only possible arrangement is $\\text{B}-\\text{O}-\\text{Y}-\\text{R}$\nCase 2: $\\text{Y}$ is the last house.\nThere are two possible arrangements:\n$\\text{B}-\\text{O}-\\text{R}-\\text{Y}$\n$\\text{O}-\\text{B}-\\text{R}-\\text{Y}$\nThe answer is $1+2=\\boxed{\\textbf{(B) } 3}$",
+            "2": "There are $4!=24$ arrangements without restrictions. There are $3!\\cdot2!=12$ arrangements such that the blue house neighboring the yellow house (calculating the arrangments of [$\\text{BY}$], $\\text{O}$, and $\\text{R}$). Hence, there are $24-12=12$ arrangements with the blue and yellow houses non-adjacent.\nBy symmetry, exactly half of the $12$ arrangements have the blue house before the yellow house, and exactly half of those $6$ arrangements have the orange house before the red house, so our answer is $12\\cdot\\frac{1}{2}\\cdot\\frac{1}{2}= \\boxed{\\textbf{(B) } 3}$",
+            "3": "To start with, the blue house is either the first or second house.\nIf the blue house is the first, then the orange must follow, leading to $2$ cases: $\\text{B-O-R-Y}$ and $\\text{B-O-Y-R}$. \nIf the blue house is second, then the orange house must be first and the yellow house last, leading to $1$ case: $\\text{O-B-R-Y}$.\nTherefore, our answer is $\\boxed{\\textbf{(B) } 3}$.",
+            "4": "We first count all the cases with the restrictions that B comes before Y and O comes before R. We have $4$ \"slots\" to choose from, and when we choose $2$ to be B and Y, the order for B and Y is automatically chosen. Also, O and R are also automatically chosen, so there are simply $\\dbinom42=6$ total cases. \nFrom here, the cases that don't work are the ones where B and Y are adjacent. BY can be treated as a single block; now, we have $3$ slots and $1$ thing to place, so there are $3$ of these cases. \nThus, this yields $6-3=3$ total cases. "
+        }
+    },
+    {
+        "competition": "AMC_12",
+        "competition_id": "2021_AMC_12A_Problems",
+        "problem_id": 141,
+        "difficulty": 2,
+        "problem": "Under what conditions is $\\sqrt{a^2+b^2}=a+b$ true, where $a$ and $b$ are real numbers?\n$\\textbf{(A) }$ It is never true.\n$\\textbf{(B) }$ It is true if and only if $ab=0$.\n$\\textbf{(C) }$ It is true if and only if $a+b\\ge 0$.\n$\\textbf{(D) }$ It is true if and only if $ab=0$ and $a+b\\ge 0$.\n$\\textbf{(E) }$ It is always true.",
+        "solutions": {
+            "1": "One can square both sides to get $a^{2}+b^{2}=a^{2}+2ab+b^{2}$. Then, $0=2ab\\implies ab=0$. Also, it is clear that both sides of the equation must be nonnegative. The answer is $\\boxed{\\textbf{(D)}}$.",
+            "2": "Complete the square of the left side by rewriting the radical to be \\[\\sqrt{(a+b)^{2}-2ab}.\\]\nFrom there it is evident for the square root of the left to be equal to the right, $ab$ must be equal to zero.\nAlso, we know that the equivalency of square root values only holds true for nonnegative values of $a+b$, making the correct answer $\\boxed{\\textbf{(D)}}.$",
+            "3": "The left side of the original equation is the arithmetic square root, which is always nonnegative. So, we need $a+b\\ge 0,$ which refutes $\\textbf{(B)}$ and $\\textbf{(E)}.$ Next, picking $(a,b)=(0,0)$ refutes $\\textbf{(A)},$ and picking $(a,b)=(1,2)$ refutes $\\textbf{(C)}.$ By POE (Process of Elimination), the answer is $\\boxed{\\textbf{(D)}}.$",
+            "4": "If we graph $\\sqrt{x^2+y^2}=x+y,$ then we get the union of:\nTherefore, the answer is $\\boxed{\\textbf{(D)}}.$\nThe graph of $\\sqrt{x^2+y^2}=x+y$ is shown below.\n[asy] /* Made by MRENTHUSIASM */ size(200);   int xMin = -5; int xMax = 5; int yMin = -5; int yMax = 5;  draw((xMin,0)--(xMax,0),black+linewidth(1.5),EndArrow(5)); draw((0,yMin)--(0,yMax),black+linewidth(1.5),EndArrow(5)); label(\"$x$\",(xMax,0),(2,0)); label(\"$y$\",(0,yMax),(0,2)); draw((xMax,0)--(0,0)--(0,yMax),red+linewidth(1.5)); [/asy]"
+        }
+    },
+    {
+        "competition": "IMO",
+        "competition_id": "1964_IMO_Problems",
+        "problem_id": 156,
+        "difficulty": 8,
+        "problem": "Suppose $a, b, c$ are the sides of a triangle. Prove that \n\\[a^2(b+c-a)+b^2(c+a-b)+c^2(a+b-c)\\le{3abc}.\\]",
+        "solutions": {
+            "1": "Let $b+c-a = x$, $c+a-b = y$, and $a+b-c = z$. Then, $a = \\frac{y+z}{2}$, $b = \\frac{x+z}{2}$, and $c = \\frac{x+y}{2}$. By AM-GM, \n\\[\\frac{x+y}{2} \\geq \\sqrt{xy},\\]\n\\[\\frac{y+z}{2} \\geq \\sqrt{yz},\\]\n\\[\\textrm{and }\\frac{x+z}{2} \\geq \\sqrt{xz}.\\]\nMultiplying these equations, we have\n\\[\\frac{x+y}{2} \\cdot \\frac{y+z}{2} \\cdot \\frac{x+z}{2} \\geq xyz\\]\n\\[\\therefore abc \\geq (a+b-c)(b+c-a)(c+a-b).\\]\nWe can now simplify:\n\\[(a+b-c)(b+c-a)(c+a-b) \\leq abc\\]\n\\[(-a^2 + b^2 - c^2 + 2ac)(c+a-b) \\leq abc\\]\n\\[a(-a^2 + b^2 - c^2 + 2ac) + c(-a^2 + b^2 - c^2 + 2ac) - b(-a^2 + b^2 - c^2 + 2ac) \\leq abc\\]\n\\[-a^3 + ab^2 - ac^2 + 2a^2c - a^2c + b^2c - c^3 + 2ac^2 + a^2b - b^3 + bc^2 - 2abc \\leq abc\\]\n\\[a^2b + a^2c - a^3 + b^2c + ab^2 - b^3 + ac^2 + bc^2 - c^3 - 2abc \\leq abc\\]\n\\[a^2(b+c-a)+b^2(c+a-b)+c^2(a+b-c)\\le{3abc}\\textrm{. }\\square\\]",
+            "2": "We can use the substitution $a=x+y$, $b=x+z$, and $c=y+z$ to get\n\\[2z(x+y)^2+2y(x+z)^2+2x(y+z)^2\\leq 3(x+y)(x+z)(y+z)\\]\n$2zx^2+2zy^2+2yx^2+2yz^2+2xy^2+2xz^2+12xyz\\leq 3x^2y+3x^2z+3y^2x+3y^2z+3z^2x+3z^2y+6xyz$\n\\[x^2y+x^2z+y^2x+y^2z+z^2x+z^2y\\geq 6xyz\\]\n\\[\\frac{x^2y+x^2z+y^2x+y^2z+z^2x+z^2y}{6}\\geq xyz=\\sqrt[6]{x^2yx^2zy^2xy^2zz^2xz^2y}\\]\nThis is true by AM-GM. We can work backwards to get that the original inequality is true.",
+            "3": "Rearrange to get\n\\[a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0,\\]\nwhich is true by Schur's inequality."
+        }
+    },
+    {
+        "competition": "IMO",
+        "competition_id": "1968_IMO_Problems",
+        "problem_id": 173,
+        "difficulty": 8,
+        "problem": "Find all natural numbers $x$ such that the product of their digits (in decimal notation) is equal to $x^2 - 10x - 22$.",
+        "solutions": {
+            "1": "Let the decimal expansion of $x$ be $\\overline{d_1d_2d_3\\dots d_n}$, where $d_i$ are base-10 digits. We then have that $x\\geq d_1\\cdot 10^{n-1}$. However, the product of the digits of $x$ is $d_1d_2d_3\\dots d_n\\leq d_1\\cdot 10\\cdot 10\\dots 10=d_1\\cdot 10^{n-1}$, with equality only when $x$ is a one-digit integer. Therefore the product of the digits of $x$ is always at most $x$, with equality only when $x$ is a base-10 digit. This implies that $x^2-10x-22\\leq x$, so $x^2-11x-22\\leq 0$. Every natural number from 1 to 12 satisfies this inequality, so we only need to check these possibilities. It is easy to rule out 1 through 11, since $x^2-10x-22<0$ for those values. However, $12^2-10\\cdot 12-22=2$, which is the product of the digits of 12. Therefore $\\boxed{12}$ is the only natural number with the desired properties. $\\blacksquare$",
+            "2": "It is pretty obvious that $x$ cannot be three digits or more, because then $x^2 - 10x - 22$ is way too big.\nWrite $x = 10a + b$ where $a$ and $b$ are digits satisfying $0 \\leq a, b < 10$. Then, we can use SFFT:\n\\[(10a + b)^2 - 10(10a + b) - 22 = ab\\]\n\\[(10a + b)^2 - 10(10a + b) - 24 = ab - 2\\]\n\\[(10a + b + 2)(10a + b - 12) = ab - 2.\\]\nWe have\n\\[(10a + b + 2)(10a + b - 12) \\geq (10a + 2)(10a - 12) = 100a^2 - 100a + 24 = 100(a^2 - a) + 24.\\]\nIt is therefore clear that $a$ must be either $0$ or $1$. We can then split into two cases:\n$\\mathbf{a = 0:}$\nWe have $(b + 2)(b - 12) = -2$ or $b^2 - 10b - 22 = 0$, which is only satisfied when $b = -2$ or $12$.\n$\\mathbf{a = 1:}$\nWe have $(b + 12)(b - 2) = b - 2$. This is only satisfied when $b = 2$, or $b + 12 = 0$. Therefore, $b = 2$, and so $x = \\boxed{12}.\\square$",
+            "3": "Let, \n$x^2-10x-22=y$\n$\\implies x^2-10+25-47=y$\n$\\implies (x-5)^2=47+y$\nNow note that, if $p$ is a prime such that $p|y$ then $7\\geq p$.\nThat means, $y=2^a*3^b*5^c*7^d$\nBut, $a^2 \\not\\equiv 2 (mod3), a^2 \\not\\equiv 2 (mod5), a^2 \\not\\equiv 5 (mod7)$ which means $3,5,7$ don't divivde $(x-5)^2-47=y.$\nSo, $y=2^a$ and $y+17=2^a+47=(x-5)^2$\nIt is easy to see that $a$ has one solution  and that is $2.$( Prove it by contradiction)\nSo, $(x-5)^2=47+2=49$\n$\\implies x=12$\n$\\blacksquare$"
+        }
+    },
+    {
+        "competition": "USAMO",
+        "competition_id": "1996_USAMO_Problems",
+        "problem_id": 226,
+        "difficulty": 8,
+        "problem": "Let $ABC$ be a triangle, and $M$ an interior point such that $\\angle MAB=10^\\circ$, $\\angle MBA=20^\\circ$ , $\\angle MAC= 40^\\circ$ and $\\angle MCA=30^\\circ$. Prove that the triangle is isosceles.",
+        "solutions": {
+            "1": "Clearly, $\\angle AMB = 150^\\circ$ and $\\angle AMC = 110^\\circ$. Now by the Law of Sines on triangles $ABM$ and $ACM$, we have \\[\\frac{AB}{\\sin 150^\\circ} = \\frac{AM}{\\sin 20^\\circ}\\] and \\[\\frac{AC}{\\sin 110^\\circ} = \\frac{AM}{\\sin 30^\\circ}.\\] Combining these equations gives us \\[\\frac{AB}{AC} = \\frac{\\sin 150^\\circ \\sin 30^\\circ}{\\sin 20^\\circ \\sin 110^\\circ}.\\] Without loss of generality, let $AB = \\sin 150^\\circ \\sin 30^\\circ = \\frac{1}{4}$ and $AC = \\sin 20^\\circ \\sin 110^\\circ$. Then by the Law of Cosines, we have\n\\begin{align*} BC^2 &= AB^2 + AC^2 - 2(AB)(BC)\\cos\\angle BAC\\\\ &= \\frac{1}{16} + \\sin^2 20^\\circ\\sin^2 110^\\circ - 2\\left(\\frac{1}{4}\\right)\\sin 20^\\circ\\sin 110^\\circ\\cos 50^\\circ \\\\ &= \\frac{1}{16} + \\sin^2 20^\\circ \\sin^2 110^\\circ - \\frac{1}{2}\\sin 20^\\circ\\sin 110^\\circ\\sin 40^\\circ \\\\ &= \\frac{1}{16} + \\sin^2 20^\\circ \\sin^2 110^\\circ - \\sin 20^\\circ\\sin 110^\\circ\\sin 20^\\circ\\cos 20^\\circ \\\\ &= \\frac{1}{16} \\end{align*}\nThus, $AB = BC$, our desired conclusion.",
+            "2": "By the law of sines, $\\frac{BM}{sin(10^\\circ)}=\\frac{AM}{sin(20^\\circ)}$ and $\\frac{CM}{sin(40^\\circ)}=\\frac{AM}{sin(30^\\circ)}$, so $\\frac{BM}{CM}=\\frac{sin(10^\\circ)sin(30^\\circ)}{sin(20^\\circ)sin(40^\\circ)}$.\nLet $\\angle MBC=x$. Then, $\\angle MCB=80^\\circ-x$. By the law of sines, $\\frac{BM}{CM}=\\frac{sin(80^\\circ-x)}{sin(x)}$.\nCombining, we have $\\frac{sin(80^\\circ-x)}{sin(x)}=\\frac{sin(10^\\circ)sin(30^\\circ)}{sin(20^\\circ)sin(40^\\circ)}$. From here, we can use the given trigonometric identities at each step:\nThe only acute angle satisfying this equality is $x=60^\\circ$. Therefore, $\\angle ACB=80^\\circ-x+30^\\circ=50^\\circ$ and $\\angle BAC=10^\\circ+40^\\circ=50^\\circ$. Thus, $\\triangle ABC$ is isosceles.",
+            "3": "If $\\angle{MBC} = x$ then by Angle Sum in a Triangle we have $\\angle{MCB} = 80^\\circ - x$. By Trig Ceva we have\n\\[\\sin 10^\\circ \\sin x \\sin 30^\\circ = \\sin (80^\\circ - x) \\sin 40^\\circ \\sin 20^\\circ.\\]\nBecause $\\dfrac{\\sin x}{\\sin (80^\\circ - x)}$ is monotonic increasing over $(0, \\dfrac{\\pi}{2})$, there is only one solution $0 \\le x \\le \\dfrac{\\pi}{2}$ to the equation. We claim it is $x = 60^\\circ$, which will make $ABC$ isosceles with $\\angle{A} = \\angle{C}$.\nNotice that\n\\[\\sin 20^\\circ \\sin 20^\\circ \\sin 40^\\circ = 2 \\sin 10^\\circ \\cos 10^\\circ \\sin 20^\\circ \\sin 40^\\circ\\]\n\\[= \\sin 10^\\circ (\\sin 10^\\circ + \\frac{1}{2}) \\sin 40^\\circ\\]\n\\[= \\sin 10^\\circ (\\frac{1}{2} \\sin 40^\\circ + \\frac{1}{2} (\\cos 30^\\circ - \\cos 50^\\circ))\\]\n\\[= \\sin 10^\\circ \\frac{1}{2} \\cos 30^\\circ\\]\n\\[= \\sin 10^\\circ \\sin 30^\\circ \\sin 60^\\circ,\\]\nas desired."
+        }
+    },
+    {
+        "competition": "USAMO",
+        "competition_id": "1977_USAMO_Problems",
+        "problem_id": 228,
+        "difficulty": 7,
+        "problem": "Determine all pairs of positive integers $(m,n)$ such that\n$(1+x^n+x^{2n}+\\cdots+x^{mn})$ is divisible by $(1+x+x^2+\\cdots+x^{m})$.",
+        "solutions": {
+            "1": "Denote the first and larger polynomial to be $f(x)$ and the second one to be $g(x)$. In order for $f(x)$ to be divisible by $g(x)$ they must have the same roots. The roots of $g(x)$ are the (m+1)th roots of unity, except for 1. When plugging into $f(x)$, the root of unity is a root of $f(x)$ if and only if the terms $x^n, x^{2n}, x^{3n}, \\cdots x^{mn}$ all represent a different (m+1)th root of unity not equal to 1. \nNote that if $\\\\gcd(m+1,n)=1$, the numbers $n, 2n, 3n, \\cdots, mn$ represent a complete set of residues minus 0 modulo $m+1$. However, if $gcd(m+1,n)=a$ not equal to 1, then $\\frac{(m+1)(n)}{a}$ is congruent to $0 \\pmod {m+1}$ and thus a complete set is not formed. Therefore, $f(x)$ divides $g(x)$ if and only if $\\boxed{\\\\gcd(m+1,n)=1}.$ $\\blacksquare$",
+            "2": "We could instead consider $f(x)$ modulo $g(x)$. Notice that $x^{m+1} = 1 \\pmod {g(x)}$, and thus we can reduce the exponents of $f(x)$ to their equivalent modulo $m+1$. We want the resulting $h(x)$ with degree less than $m+1$ to be equal to $g(x)$ (of degree $m$), which implies that the exponents of $f(x)$ must be all different modulo $m+1$. This can only occur if and only if $gcd(m+1, n) = 1$, and this is our answer, as shown in Solution 1.",
+            "3": "Notice that $1+x^n+x^{2n}+...+x^{mn}=\\frac{x^{mn+n}-1}{x^n-1}$ and $1+x+x^2+...+x^m=\\frac{x^{m+1}-1}{x-1}$, so it remains to prove that $(x^n-1)(x^{m+1}-1) \\mid (x^{mn+n}-1)(x-1)$. It is clear that $(x^n-1) \\mid (x^{mn+n}-1)$ and $(x^{m+1}-1) \\mid (x^{mn+n}-1)$. For any $k \\in \\mathbb{N}$, we can use the fact that $x^k-1=\\prod_{d \\mid k} \\Phi _d(x)$, where $\\Phi _d(x)$ is the dth cyclotomic polynomial. If $\\gcd(m+1,n) = d > 1$, then $x^{m+1}-1$ and $x^n-1$ share a common cyclotomic polynomial; namely, $\\Phi _d(x)$. But since all the factors of $x^{mn+n}-1$ are distinct, $(x^{mn+n}-1)(x-1)$ cannot be divisible by $(x^n-1)(x^{m+1}-1)$. We find that $\\gcd(m+1,n) = 1$ must be the solution, since the only shared polynomial is $\\Phi _1(x)=x-1$, and we are done."
+        }
+    },
+    {
+        "competition": "USAMO",
+        "competition_id": "1978_USAMO_Problems",
+        "problem_id": 232,
+        "difficulty": 7,
+        "problem": "Given that $a,b,c,d,e$ are real numbers such that\n$a+b+c+d+e=8$,\n$a^2+b^2+c^2+d^2+e^2=16$.\nDetermine the maximum value of $e$.",
+        "solutions": {
+            "1": "By Cauchy Schwarz, we can see that $(1+1+1+1)(a^2+b^2+c^2+d^2)\\geq (a+b+c+d)^2$\nthus $4(16-e^2)\\geq (8-e)^2$ \nFinally, $e(5e-16) \\geq 0$ which means $\\frac{16}{5} \\geq e \\geq 0$\nso the maximum value of $e$ is $\\frac{16}{5}$.",
+            "2": "Seeing as we have an inequality with constraints, we can use Lagrange multipliers to solve this problem.\nWe get the following equations:\n$(1)\\hspace*{0.5cm} a+b+c+d+e=8\\\\ (2)\\hspace*{0.5cm} a^{2}+b^{2}+c^{2}+d^{2}+e^{2}=16\\\\ (3)\\hspace*{0.5cm} 0=\\lambda+2a\\mu\\\\ (4)\\hspace*{0.5cm} 0=\\lambda+2b\\mu\\\\ (5)\\hspace*{0.5cm} 0=\\lambda+2c\\mu\\\\ (6)\\hspace*{0.5cm} 0=\\lambda+2d\\mu\\\\ (7)\\hspace*{0.5cm} 1=\\lambda+2e\\mu$\nIf $\\mu=0$, then $\\lambda=0$ according to $(6)$ and $\\lambda=1$ according to $(7)$, so $\\mu \\neq 0$. Setting the right sides of $(3)$ and $(4)$ equal yields $\\lambda+2a \\mu= \\lambda+2b \\mu \\implies 2a\\mu=2b \\mu \\implies a=b$. Similar steps yield that $a=b=c=d$. Thus, $(1)$ becomes $4d+e=8$ and $(2)$ becomes $4d^{2}+e^{2}=16$. Solving the system yields $e=0,\\frac{16}{5}$, so the maximum possible value of $e$ is $\\frac{16}{5}$.",
+            "3": "A re-writing of Solution 1 to avoid the use of Cauchy Schwarz. We have\n\\[(a+b+c+d)^2=(8-e)^2,\\] and \n\\[a^2+b^2+c^2+d^2=16-e^2.\\]\nThe second equation times 4, then minus the first equation, \n\\[(a-b)^2+(a-c)^2+(a-d)^2+(b-c)^2+(b-d)^2+(c-d)^2=4(16-e^2)-(8-e)^2.\\]\nThe rest follows."
+        }
+    },
+    {
+        "competition": "USAMO",
+        "competition_id": "1976_USAMO_Problems",
+        "problem_id": 235,
+        "difficulty": 8,
+        "problem": "If $P(x)$, $Q(x)$, $R(x)$, and $S(x)$ are all polynomials such that\n\\[P(x^5) + xQ(x^5) + x^2 R(x^5) = (x^4 + x^3 + x^2 + x +1) S(x),\\]\nprove that $x-1$ is a factor of $P(x)$.",
+        "solutions": {
+            "1": "In general we will show that if $m$ is an integer less than $n$ and $P_0, \\dotsc, P_{m-1}$ and $S$ are polynomials satisfying\n\\[P_0(x^n) + x P_1(x^n) + \\dotsb + x^{m-1} P_{m-1}(x^n) = \\sum_{k=0}^{n-1} x^k S(x),\\]\nthen $P_k(1) = 0$, for all integers $0 \\le k \\le m-1$.  For the problem, we may set $n=5$, $m=3$, and then note that since $P(1)= 0$, $(x-1)$ is a factor of $P(x)$.\nIndeed, let $\\omega_1, \\dotsc, \\omega_{n-1}$ be the $n$th roots of unity other than 1.  Then for all integers $1 \\le i \\le n-1$,\n\\[\\sum_{k=0}^{m-1} \\omega_i^k P_k(\\omega_i^n) = \\sum_{k=0}^{m-1} \\omega_i^k P_k(1) = \\sum_{k=0}^{n-1} \\omega_i^k S(\\omega_i) = \\frac{\\omega_i^{n-1} - 1}{\\omega_i - 1} S(\\omega_i) = 0 ,\\]\nfor all integers $1 \\le i \\le n$.  This means that the $(m-1)$th degree polynomial\n\\[\\sum_{k=0}^{m-1} x^k P_k(1)\\]\nhas $n-1 > m-1$ distinct roots.  Therefore all its coefficients must be zero, so $P_k = 0$ for all integers $0 \\le k \\le m-1$, as desired.",
+            "2": "Let $\\zeta, \\xi, \\rho$ be three distinct primitive fifth roots of unity.\nSetting $x = \\zeta, \\xi$, we have\n\\begin{align*} P(1) + \\zeta Q(1) + \\zeta^2 R(1) &= \\frac{\\zeta^5-1}{\\zeta-1} S(\\zeta) = 0, \\\\ P(1) + \\xi Q(1) + \\xi^2 R(1) &= \\frac{\\xi^5-1}{\\xi-1} S(\\xi) = 0 . \\end{align*}\nThese equations imply that\n\\[\\zeta Q(1) + \\zeta^2 R(1) = \\xi Q(1) + \\xi^2 R(1),\\]\nor\n\\[Q(1) = - ( \\zeta + \\xi)R(1).\\]\nBut by symmetry,\n\\[Q(1) = - (\\zeta + \\rho)R(1) .\\]\nSince $\\xi \\neq \\rho$, it follows that $Q(1) = R(1) = 0$.  Then, as noted above,\n\\[P(1) = P(1) + \\zeta Q(1) + \\zeta^2 R(1) = 0,\\]\nso $(x-1)$ is a factor of $P(x)$, as desired.",
+            "3": "Let $z, z^2, z^3$ be three of the 5th roots of unity not equal to one that satisfy $1 + z + z^2 + z^3 + z^4 = 0$ as a result. Plugging them into the equation gives the linear system of equations in $(A(1), B(1), C(1))$:\n\\[A(1) + zB(1) + z^2C(1) = 0\\]\n\\[A(1) + z^2B(1) + z^4C(1) = 0\\]\n\\[A(1) + z^3B(1) + z^6C(1) = 0\\]\nDirect observation gives $(A(1), B(1), C(1)) = (0,0,0)$ as a solution, and there are no others because the system of equations is linear. Hence, $A(1) = 0$, and so $(x-1)$ is a factor of $A(x)$, as desired."
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "2012_AIME_I_Problems",
+        "problem_id": 251,
+        "difficulty": 3,
+        "problem": "Find the number of positive integers with three not necessarily distinct digits, $abc$, with $a \\neq 0$ and $c \\neq 0$ such that both $abc$ and $cba$ are multiples of $4$.",
+        "solutions": {
+            "1": "A positive integer is divisible by $4$ if and only if its last two digits are divisible by $4.$ For any value of $b$, there are two possible values for $a$ and $c$, since we find that if $b$ is even, $a$ and $c$ must be either $4$ or $8$, and if $b$ is odd, $a$ and $c$ must be either $2$ or $6$. There are thus $2 \\cdot 2 = 4$ ways to choose $a$ and $c$ for each $b,$ and $10$ ways to choose $b$ since $b$ can be any digit. The final answer is then $4 \\cdot 10 = \\boxed{040}$.",
+            "2": "A number is divisible by four if its last two digits are divisible by 4. Thus, we require that $10b + a$ and $10b + c$ are both divisible by $4$. If $b$ is odd, then $a$ and $c$ must both be $2 \\pmod 4$ meaning that $a$ and $c$ are $2$ or $6$. If $b$ is even, then $a$ and $c$ must be $0 \\pmod 4$ meaning that $a$ and $c$ are $4$ or $8$. For each choice of $b$ there are $2$ choices for $a$ and $2$ for $c$ for a total of $10 \\cdot 2 \\cdot 2 = \\boxed{040}$ numbers.",
+            "3": "For this number to fit the requirements $bc$ and $ba$ must be divisible by 4. So $bc = 00, 04, 08, 12, 16, ... , 92, 96$ and so must $ba$ for each two digits of $bc$. There are two possibilities for $ba$ if $b$ is odd and three possibilities if $b$ is even. So there are $2^{2} \\cdot 5+3^{2} \\cdot 4 = 65$ possibilities but this overcounts when $a$ or $c = 0$. So when $bc = 00, 20, 40, 60, 80$ and the corresponding $ba$ should be removed, so $65 - 5 \\cdot 3 = 50$. But we are still overcounting when $b$ is even because then $a$ can be 0. So the answer is $50 - 10 \\cdot 1 = \\boxed{040}$"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1987_AIME_Problems",
+        "problem_id": 256,
+        "difficulty": 5,
+        "problem": "Find the largest possible value of $k$ for which $3^{11}$ is expressible as the sum of $k$ consecutive positive integers.",
+        "solutions": {
+            "1": "Let us write down one such sum, with $m$ terms and first term $n + 1$:\n$3^{11} = (n + 1) + (n + 2) + \\ldots + (n + m) = \\frac{1}{2} m(2n + m + 1)$.\nThus $m(2n + m + 1) = 2 \\cdot 3^{11}$ so $m$ is a divisor of $2\\cdot 3^{11}$.  However, because $n \\geq 0$ we have $m^2 < m(m + 1) \\leq 2\\cdot 3^{11}$ so $m < \\sqrt{2\\cdot 3^{11}} < 3^6$.  Thus, we are looking for large factors of $2\\cdot 3^{11}$ which are less than $3^6$.  The largest such factor is clearly $2\\cdot 3^5 = 486$; for this value of $m$ we do indeed have the valid expression $3^{11} = 122 + 123 + \\ldots + 607$, for which $k=\\boxed{486}$.",
+            "2": "First note that if $k$ is odd, and $n$ is the middle term, the sum equals $kn$. If $k$ is even, then we have the sum equal to $kn+k/2$, which will be even. Since $3^{11}$ is odd, we see that $k$ is odd. \nThus, we have $nk=3^{11} \\implies n=3^{11}/k$. Also, note $n-(k+1)/2=0 \\implies n=(k+1)/2.$ Subsituting $n=3^{11}/k$, we have $k^2+k=2*3^{11}$. Proceed as in solution 1.",
+            "3": "Proceed as in Solution 1 until it is noted that $m$ is a divisor of $2\\cdot 3^{11}$. The divisors of $2\\cdot 3^{11}$ are $3^{1} , 2\\cdot 3^{1} , 3^{2} , 2\\cdot 3^{2} , \\ldots , 2\\cdot 3^{10} , 3^{11}$. Note that the factors of $m(2n + m + 1)$ are of opposite parity (if $m$ is odd, then $(2n + m + 1)$ is even and vice versa). Thus, one of the two factors will be a power of three, and the other will be twice a power of three. $(2n + m + 1)$ will represent the greater factor while $m$ will represent the lesser factor. Given this information, we need to find the factor pair that maximizes the lesser of the two factors, as this will maximize the value of $m$. The factor pair which maximizes the lesser factor is $2\\cdot 3^{5}$ and $3^{6}$. It follows that $m$ = $2\\cdot 3^{5}$ = $\\boxed{486}$."
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "2015_AIME_II_Problems",
+        "problem_id": 260,
+        "difficulty": 3,
+        "problem": "Let $N$ be the least positive integer that is both $22$ percent less than one integer and $16$ percent greater than another integer. Find the remainder when $N$ is divided by $1000$.",
+        "solutions": {
+            "1": "If $N$ is $22$ percent less than one integer $k$, then $N=\\frac{78}{100}k=\\frac{39}{50}k$. In addition, $N$ is $16$ percent greater than another integer $m$, so $N=\\frac{116}{100}m=\\frac{29}{25}m$. Therefore, $k$ is divisible by $50$ and $m$ is divisible by $25$. Setting these two equal, we have $\\frac{39}{50}k=\\frac{29}{25}m$. Multiplying by $50$ on both sides, we get $39k=58m$.\nThe smallest integers $k$ and $m$ that satisfy this are $k=1450$ and $m=975$, so $N=1131$. The answer is $\\boxed{131}$.",
+            "2": "Continuing from Solution 1, we have $N=\\frac{39}{50}k$ and $N=\\frac{29}{25}m$. It follows that $k=\\frac{50}{39}N$ and $m=\\frac{25}{29}N$. Both $m$ and $k$ have to be integers, so, in order for that to be true, $N$ has to cancel the denominators of both $\\frac{50}{39}$ and $\\frac{25}{29}$. In other words, $N$ is a multiple of both $29$ and $39$. That makes $N=\\operatorname{lcm}(29,39)=29\\cdot39=1131$. The answer is $\\boxed{131}$.",
+            "3": "We can express $N$ as $0.78a$ and $1.22b$, where $a$ and $b$ are some positive integers. $N=0.78a=1.22b\\implies100N=78a=122b.$ Let us try to find the smallest possible value of $100N$, first ignoring the integral constraint. \nObviously, we are just trying to find the LCM of $78$ and $116.$ They have no common factors but $2$, so we multiply $78$ and $116$ and divide by $2$ to get $4524.$ This is obviously not divisible by $100$, so this is not possible, as it would imply that $N=\\dfrac{4524}{100},$ which is not an integer. This can be simplified to $\\dfrac{1131}{25}$. \nWe know that any possible value of $N$ will be an integral multiple of this value; the smallest such $N$ is achieved by multiplying this value by $25.$ We arrive at $1131$, which is $\\boxed{131}\\mod1000.$"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1996_AIME_Problems",
+        "problem_id": 275,
+        "difficulty": 6,
+        "problem": "In parallelogram $ABCD$, let $O$ be the intersection of diagonals $\\overline{AC}$ and $\\overline{BD}$. Angles $CAB$ and $DBC$ are each twice as large as angle $DBA$, and angle $ACB$ is $r$ times as large as angle $AOB$. Find $\\lfloor 1000r \\rfloor$.",
+        "solutions": {
+            "1": "Let $\\theta = \\angle DBA$. Then $\\angle CAB = \\angle DBC = 2\\theta$, $\\angle AOB = 180 - 3\\theta$, and $\\angle ACB = 180 - 5\\theta$. Since $ABCD$ is a parallelogram, it follows that $OA = OC$. By the Law of Sines on $\\triangle ABO,\\, \\triangle BCO$,\nDividing the two equalities yields \n\\[\\frac{\\sin 2\\theta}{\\sin \\theta} = \\frac{\\sin (180 - 5\\theta)}{\\sin 2\\theta} \\Longrightarrow \\sin^2 2\\theta = \\sin 5\\theta \\sin \\theta.\\]\nPythagorean and product-to-sum identities yield\n\\[1 - \\cos^2 2 \\theta = \\frac{\\cos 4\\theta - \\cos 6 \\theta}{2},\\]\nand the double and triple angle ($\\cos 3x = 4\\cos^3 x - 3\\cos x$) formulas further simplify this to\n\\[4\\cos^3 2\\theta - 4\\cos^2 2\\theta - 3\\cos 2\\theta + 3 = (4\\cos^2 2\\theta - 3)(\\cos 2\\theta - 1) = 0\\]\nThe only value of $\\theta$ that fits in this context comes from $4 \\cos^2 2\\theta - 3 = 0 \\Longrightarrow \\cos 2\\theta = \\frac{\\sqrt{3}}{2} \\Longrightarrow \\theta = 15^{\\circ}$. The answer is $\\lfloor 1000r \\rfloor = \\left\\lfloor 1000 \\cdot \\frac{180 - 5\\theta}{180 - 3\\theta} \\right\\rfloor = \\left \\lfloor \\frac{7000}{9} \\right \\rfloor = \\boxed{777}$.",
+            "2": "Define $\\theta$ as above. Since $\\angle CAB = \\angle CBO$, it follows that $\\triangle COB \\sim \\triangle CBA$, and so $\\frac{CO}{BC} = \\frac{BC}{AC} \\Longrightarrow BC^2 = AC \\cdot CO = 2CO^2 \\Longrightarrow BC = CO\\sqrt{2}$. The Law of Sines on $\\triangle BOC$ yields that \n\\[\\frac{BC}{CO} = \\frac{\\sin (180-3\\theta)}{\\sin 2\\theta} = \\frac{\\sin 3\\theta}{\\sin 2\\theta} = \\sqrt{2}\\]\nExpanding using the sine double and triple angle formulas, we have \n\\[2\\sqrt {2} \\sin \\theta \\cos \\theta = \\sin\\theta( - 4\\sin ^2 \\theta + 3) \\Longrightarrow \\sin \\theta\\left(4\\cos^2\\theta - 2\\sqrt {2} \\cos \\theta - 1\\right) = 0.\\]\nBy the quadratic formula, we have $\\cos \\theta = \\frac {2\\sqrt {2} \\pm \\sqrt {8 + 4 \\cdot 1 \\cdot 4}}{8} = \\frac {\\sqrt {6} \\pm \\sqrt {2}}{4}$, so $\\theta = 15^{\\circ}$ (as the other roots are too large to make sense in context). The answer follows as above.",
+            "3": "We will focus on $\\triangle ABC$. Let $\\angle ABO = x$, so $\\angle BAO = \\angle OBC = 2x$. Draw the  perpendicular from $C$ intersecting $AB$ at $H$. Without loss of generality, let $AO = CO = 1$. Then $HO = 1$, since $O$ is the circumcenter of $\\triangle AHC$. Then $\\angle OHA = 2x$. \nBy the Exterior Angle Theorem, $\\angle COB = 3x$ and $\\angle COH = 4x$. That implies that $\\angle HOB = x$. That makes $HO = HB = 1$. Then since by AA ($\\angle HBC = \\angle HOC = 3x$ and reflexive on $\\angle OCB$), $\\triangle OCB \\sim \\triangle BCA$.\nThen by the Pythagorean Theorem, $1^2 + HC^2 = \\left(\\sqrt {2}\\right)^2\\implies HC = 1$. That makes $\\triangle HOC$ equilateral. Then $\\angle HOC = 4x = 60 \\implies x = 15$. The answer follows as above."
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "2008_AIME_II_Problems",
+        "problem_id": 278,
+        "difficulty": 3,
+        "problem": "Let $N = 100^2 + 99^2 - 98^2 - 97^2 + 96^2 + \\cdots + 4^2 + 3^2 - 2^2 - 1^2$, where the additions and subtractions alternate in pairs. Find the remainder when $N$ is divided by $1000$.",
+        "solutions": {
+            "1": "Rewriting this sequence with more terms, we have\nFactoring this expression yields\nNext, we get\nThen,\nDividing $10100$ by $1000$ yields a remainder of $\\boxed{100}$.",
+            "2": "Since we want the remainder when $N$ is divided by $1000$, we may ignore the $100^2$ term. Then, applying the difference of squares factorization to consecutive terms,",
+            "3": "By observation, we realize that the sequence \\[(a+3)^2 + (a+2)^2 - (a+1)^2 - a^2\\] alternates every 4 terms. Simplifying, we get \\[(a+3)^2 + (a+2)^2 - (a+1)^2 - a^2 = 8a + 12\\], turning $N$ into a arithmetic sequence with 25 terms, them being $1, 5, 9, \\dots ,97$, as the series $8a + 12$ alternates every 4 terms.\nApplying the sum of arithmetic sequence formula, we get\nSo the answer would be \\[\\frac{10100}{1000} = \\boxed{100}\\].\n"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1984_AIME_Problems",
+        "problem_id": 285,
+        "difficulty": 4,
+        "problem": "In tetrahedron $ABCD$, edge $AB$ has length 3 cm. The area of face $ABC$ is $15\\mbox{cm}^2$ and the area of face $ABD$ is $12 \\mbox { cm}^2$. These two faces meet each other at a $30^\\circ$ angle. Find the volume of the tetrahedron in $\\mbox{cm}^3$.",
+        "solutions": {
+            "1": "Position face $ABC$ on the bottom. Since $[\\triangle ABD] = 12 = \\frac{1}{2} \\cdot AB \\cdot h_{ABD}$, we find that $h_{ABD} = 8$. Because the problem does not specify, we may assume both $ABC$ and $ABD$ to be isosceles triangles. Thus, the height of $ABD$ forms a $30-60-90$ with the height of the tetrahedron. So, $h = \\frac{1}{2} (8) = 4$. The volume of the tetrahedron is thus $\\frac{1}{3}Bh = \\frac{1}{3} \\cdot15 \\cdot 4 = \\boxed{020}$.",
+            "2": "It is clear that $DX=8$ and $CX=10$ where $X$ is the foot of the perpendicular from $D$ and $C$ to side $AB$. Thus $[DXC]=\\frac{ab\\sin{c}}{2}=20=5 \\cdot h \\rightarrow h = 4$ where h is the height of the tetrahedron from $D$. Hence, the volume of the tetrahedron is $\\frac{bh}{3}=15\\cdot \\frac{4}{3}=\\boxed{020}$\n\n(Note this actually isn't rigorous because they never proved that the height from $D$ to $XC$ is the altitude of the tetrahedron.",
+            "3": "Make faces $ABC$ and $ABD$ right triangles. This makes everything a lot easier. Then do everything in solution 1.",
+            "4": "We can use 3D coordinates.\nLet $A = (0, 0, 0)$ and $B = (3, 0, 0).$ WLOG, let $D = \\left(\\frac{3}{2}, 8, 0\\right)$, because the area of $\\Delta{ABD} = 12$ and the tetrahedron area won't change if we put it somewhere else with $y=8.$\nTo find $C$, we can again let the $x$-coordinate be $\\frac{3}{2}$ for simplicity. Note that $C$ is $10$ units away from $AB$ because the area of $\\Delta{ABC}$ is $15$. Since the angle between $ABD$ and $ABC$ is $30^\\circ$, we can form a 30-60-90 triangle between $A$, $B$, and an altitude dropped from $C$ onto face $ABD$. Since $10$ is the hypotenuse, we get $5\\sqrt{3}$ and $5$ as legs. Then $y=5\\sqrt{3}$ and $z=5$, so $C = \\left(\\frac{3}{2}, 5\\sqrt{3}, 5\\right).$\n(I highly advise you to draw both the tetrahedron and 30-60-90 triangle to get a better perspective.)\nNow, we can move onto vectors. To find the volume of the tetrahedron, we use the formula $\\frac{1}{3}Bh.$ Letting $\\Delta{ABC}$ be the base we have $B = 15$ (from the problem statement). We need to find the distance between $D$ and $ABC$, and to do this, we should find the projection of $D$ onto face $ABC$.\nNote that we can simplify this to projecting $D$ onto $\\mathbf{\\overrightarrow{C}}.$ This is because we know the projection will have the same $x$-coordinate as $D$ and $C$, as both are $\\frac{3}{2}.$ Now we find $\\text{proj}_{\\mathbf{\\overrightarrow{D}}} \\mathbf{\\overrightarrow{C}}$, or plugging in our coordinates, $\\text{proj}_{\\langle\\frac{3}{2}, 5\\sqrt{3}, 5\\rangle} \\left\\langle\\frac{3}{2}, 8, 0\\right\\rangle$. \nLet the $x$-coordinates for both be $0$ for simplicity, because we can always add a $\\frac{3}{2}$ at the end. Using the projection formula, we get \\[\\langle 0, 6, 2\\sqrt{3}\\rangle.\\]\nFinally, we calculate the distance between $\\left(\\frac{3}{2}, 6, 2\\sqrt{3}\\right)$ and $D$ to be $4$. So the height is $4$, and plugging into our tetrahedron formula we get \\[\\frac{1}{3}\\cdot 15\\cdot 4 = \\boxed{20}.\\]"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "2006_AIME_II_Problems",
+        "problem_id": 287,
+        "difficulty": 5,
+        "problem": "A sequence is defined as follows $a_1=a_2=a_3=1,$ and, for all positive integers $n, a_{n+3}=a_{n+2}+a_{n+1}+a_n.$ Given that $a_{28}=6090307, a_{29}=11201821,$ and $a_{30}=20603361,$ find the remainder when $\\sum^{28}_{k=1} a_k$ is divided by 1000.",
+        "solutions": {
+            "1": "Define the sum as $s$. Since $a_n\\ = a_{n + 3} - a_{n + 2} - a_{n + 1}$, the sum will be:\nThus $s = \\frac{a_{28} + a_{30}}{2}$, and $a_{28},\\,a_{30}$ are both given; the last four digits of their sum is $3668$, and half of that is $1834$. Therefore, the answer is $\\boxed{834}$.",
+            "2": "Since the problem only asks for the first 28 terms and we only need to calculate mod 1000, we simply bash the first 28 terms:\n\n$a_{1}\\equiv 1 \\pmod {1000} \\\\ a_{2}\\equiv 1 \\pmod {1000} \\\\ a_{3}\\equiv 1 \\pmod {1000} \\\\ a_{4}\\equiv 3 \\pmod {1000} \\\\ a_{5}\\equiv 5 \\pmod {1000} \\\\ \\cdots \\\\ a_{25} \\equiv 793 \\pmod {1000} \\\\ a_{26} \\equiv 281 \\pmod {1000} \\\\ a_{27} \\equiv 233 \\pmod {1000} \\\\ a_{28} \\equiv 307 \\pmod {1000}$\nAdding all the residues shows the sum is congruent to $\\boxed{834}$ mod $1000$.",
+            "3": "All terms in the sequence are sums of previous terms, so the sum of all terms up to a certain point must be some linear combination of the first three terms. Also, we are given $a_{28}, a_{29},$ and $a_{30}$, so we can guess that there is some way to use them in a formula. Namely, we guess that there exists some $p, q, r$ such that $\\sum_{k=1}^{n}{a_k} = pa_n+qa_{n+1}+ra_{n+2}$. From here, we list out the first few terms of the sequence and the cumulative sums, and with a little bit of substitution and algebra we see that $(p, q, r) = (\\frac{1}{2}, 0, \\frac{1}{2})$, at least for the first few terms. From this, we have that $\\sum_{k=1}^{28}{a_k} = \\frac{a_{28}+a_{30}}{2} \\equiv{\\boxed{834}}(\\mod 1000)$."
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1996_AIME_Problems",
+        "problem_id": 288,
+        "difficulty": 3,
+        "problem": "Suppose that the roots of $x^3+3x^2+4x-11=0$ are $a$, $b$, and $c$, and that the roots of $x^3+rx^2+sx+t=0$ are $a+b$, $b+c$, and $c+a$. Find $t$.",
+        "solutions": {
+            "1": "By Vieta's formulas on the polynomial $P(x) = x^3+3x^2+4x-11 = (x-a)(x-b)(x-c) = 0$, we have $a + b + c = s = -3$, $ab + bc + ca = 4$, and $abc = 11$. Then\nThis is just the definition for $-P(-3) = \\boxed{023}$.\nAlternatively, we can expand the expression to get\n\\begin{align*} t &= -(-3-a)(-3-b)(-3-c)\\\\  &= (a+3)(b+3)(c+3)\\\\  &= abc + 3[ab + bc + ca] + 9[a + b + c] + 27\\\\ t &= 11 + 3(4) + 9(-3) + 27 = 23\\end{align*}",
+            "2": "Each term in the expansion of $(a+b)(b+c)(c+a)$ has a total degree of 3.  Another way to get terms with degree 3 is to multiply out $(a+b+c)(ab+bc+ca)$.  Expanding both of these expressions and comparing them shows that:\n$(a+b)(b+c)(c+a) = (ab+bc+ca)(a+b+c)-abc$\n$t = -(a+b)(b+c)(c+a) = abc-(ab+bc+ca)(a+b+c) = 11-(4)(-3) = 23$\n\nA way to realize $(a+b)(b+c)(c+a) = (ab+bc+ca)(a+b+c)-abc$:\n$(a + b)(b+c)(c+a) = a^2b + a^2c + b^2a + b^2c + c^2a + c^2b + abc + abc$\n(Add an extra $abc$)\n$a^2b + a^2c + abc + b^2a + b^2c + abc + c^2a + c^2b + abc - abc =$\n$a(ab + bc + ac) + b(ab + bc + ac) + c(ab + bc + ac) - abc =$\n$(a + b + c)(ab + bc + ac) - abc = (-3)(4) - 11 = -23$.\nThe value of $t$ is the negation of this, which is $-(-23) = \\boxed{023}$",
+            "3": "We have that $x^3+3x^2+4x-11=0$ for roots $a,b,c.$\nIn the second cubic function $x^3+rx^2+sx+t=0,$ the roots are $a+b,b+c,c+a.$\nBy Vieta's formulae, we see that $t= -(a+b)(b+c)(a+c).$\nAs we know that the sum of the roots of the first polynomial, $a+b+c$ is $-3$ by applying Vieta's again.\nUsing this fact, we can rewrite $t$ as $-(-3-a)(-3-b)(-3-c) = (a+3)(b+3)(c+3).$\nSeeing this, we can find the value of the product of the roots by applying this to the first equation.\nThis can be done by setting $x'=a+3,$ so, from this, we see that we should plug in $x'-3$ for $x$ in $x^3+3x^2+4x-11=0$.\nAfter simplifying, we get that the polynomial is $x'^3 - 6x'^2 + 13x' - 23 = 0.$\nGiven that the product of the roots of this equation is equivalent to our desired value for $t$, we can apply Vieta's formulae for a third time to find that $t = -(\\frac{-23}{1}) = \\boxed{023}.$"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1990_AIME_Problems",
+        "problem_id": 290,
+        "difficulty": 3,
+        "problem": "Let $P_1^{}$ be a regular polygon and $P_2^{}$ be a regular polygon $(r\\geq s\\geq 3)$ such that each interior angle of $P_1^{}$ is $\\frac{59}{58}$ as large as each interior angle of $P_2^{}$. What's the largest possible value of $s_{}^{}$?",
+        "solutions": {
+            "1": "The formula for the interior angle of a regular sided polygon is $\\frac{(n-2)180}{n}$. \nThus, $\\frac{\\frac{(r-2)180}{r}}{\\frac{(s-2)180}{s}} = \\frac{59}{58}$. Cross multiplying and simplifying, we get $\\frac{58(r-2)}{r} = \\frac{59(s-2)}{s}$. Cross multiply and combine like terms again to yield $58rs - 58 \\cdot 2s = 59rs - 59 \\cdot 2r \\Longrightarrow 118r - 116s = rs$. Solving for $r$, we get $r = \\frac{116s}{118 - s}$.\n$r \\ge 0$ and $s \\ge 0$, making the numerator of the fraction positive. To make the denominator positive, $s < 118$; the largest possible value of $s$ is $117$.\nThis is achievable because the denominator is $1$, making $r$ a positive number $116 \\cdot 117$ and $s = \\boxed{117}$.",
+            "2": "Like above, use the formula for the interior angles of a regular sided polygon.\n\n$\\frac{(r-2)180}{r} = \\frac{59}{58} * \\frac{(s-2)180}{s}$\n\n$59 * 180 * (s-2) * r = 58 * 180 * (r-2) * s$\n\n$59 * (rs - 2r) = 58 * (rs - 2s)$\n\n$rs - 118r = -116s$\n\n$rs = 118r-116s$\n\nThis equation tells us $s$ divides $118r$. If $s$ specifically divides 118 then the highest it can be is 118. However, this gives an equation with no solution. The second largest possibility in this case is $s=59$, which does give a solution: $s=59, r=116$. Although, the problem asks for $s$, not $r$. The only conceivable reasoning behind this is that $r$ is greater than 1000. This prompts us to look into the second case, where $s$ divides $r$. Make $r = s * k$. Rewrite the equation using this new information.\n\n$s * s * k = 118 * s * k - 116 * s$\n\n$s * k = 118 * k - 116$\n\nNow we now k divides 116. The larger k is, the larger s will be, so we set k to be the maximum: 116.\n\n$s * 116 = 118 * 116 - 116$\n\n$s = 118 - 1$\n\n$s = \\boxed{117}$\n",
+            "3": "As in above, we have $rs = 118r - 116s.$ This means that $rs + 116s - 118r = 0.$ Using SFFT we obtain $s(r+116) - 118(r+116) = -118 \\cdot 116 \\implies (s-118)(r+116) = -118 \\cdot 116.$ Since $r+116$ is always positive, we know thta $s-118$ must be negative. Therefore the maximum value of $s$ must be $\\boxed{117}$ which indeed yields an integral value of $r.$"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1994_AIME_Problems",
+        "problem_id": 292,
+        "difficulty": 5,
+        "problem": "In triangle $ABC,\\,$ angle $C$ is a right angle and the altitude from $C\\,$ meets $\\overline{AB}\\,$ at $D.\\,$  The lengths of the sides of $\\triangle ABC\\,$ are integers, $BD=29^3,\\,$ and $\\cos B=m/n\\,$, where $m\\,$ and $n\\,$ are relatively prime positive integers.  Find $m+n.\\,$",
+        "solutions": {
+            "1": "Since $\\triangle ABC \\sim \\triangle CBD$, we have $\\frac{BC}{AB} = \\frac{29^3}{BC} \\Longrightarrow BC^2 = 29^3 AB$. It follows that $29^2 | BC$ and $29 | AB$, so $BC$ and $AB$ are in the form $29^2 x$ and $29 x^2$, respectively, where x is an integer. \nBy the Pythagorean Theorem, we find that $AC^2 + BC^2 = AB^2 \\Longrightarrow (29^2x)^2 + AC^2 = (29 x^2)^2$, so $29x | AC$. Letting $y = AC / 29x$, we obtain after dividing through by $(29x)^2$, $29^2 = x^2 - y^2 = (x-y)(x+y)$. As $x,y \\in \\mathbb{Z}$, the pairs of factors of $29^2$ are $(1,29^2)(29,29)$; clearly $y = \\frac{AC}{29x} \\neq 0$, so $x-y = 1, x+y= 29^2$. Then, $x = \\frac{1+29^2}{2} = 421$.\nThus, $\\cos B = \\frac{BC}{AB} = \\frac{29^2 x}{29x^2} = \\frac{29}{421}$, and $m+n = \\boxed{450}$.",
+            "2": "We will solve for $\\cos B$ using $\\triangle CBD$, which gives us $\\cos B = \\frac{29^3}{BC}$. By the Pythagorean Theorem on $\\triangle CBD$, we have $BC^2 - DC^2 = (BC + DC)(BC - DC) = 29^6$. Trying out factors of $29^6$, we can either guess and check or just guess to find that $BC + DC = 29^4$ and $BC - DC = 29^2$ (The other pairs give answers over 999). Adding these, we have $2BC = 29^4 + 29^2$ and $\\frac{29^3}{BC} = \\frac{2*29^3}{29^2 (29^2 +1)} = \\frac{58}{842} = \\frac{29}{421}$, and our answer is $\\boxed{450}$.",
+            "3": "Using similar right triangles, we identify that $CD = \\sqrt{AD \\cdot BD}$. Let $AD$ be $29 \\cdot k^2$, to avoid too many radicals, getting $CD = k \\cdot 29^2$. Next we know that $AC = \\sqrt{AB \\cdot AD}$ and that $BC = \\sqrt{AB \\cdot BD}$. Applying the logic with the established values of k, we get $AC = 29k \\cdot \\sqrt{29^2 + k^2}$ and $BC = 29^2 \\cdot \\sqrt{29^2 + k^2}$. Next we look to the integer requirement. Since $k$ is both outside and inside square roots, we know it must be an integer to keep all sides as integers. Let $y$ be $\\sqrt{29^2 + k^2}$, thus $29^2 = y^2 - k^2$, and $29^2 = (y + k)(y - k)$. Since $29$ is prime, and $k$ cannot be zero, we find $k = 420$ and $y = 421$ as the smallest integers satisfying this quadratic Diophantine equation. Then, since $cos B$ = $\\frac{29}{\\sqrt{29^2 + k^2}}$. Plugging in we get $cos B = \\frac{29}{421}$, thus our answer is $\\boxed{450}$."
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "2015_AIME_I_Problems",
+        "problem_id": 293,
+        "difficulty": 3,
+        "problem": "The expressions $A$ = $1 \\times 2 + 3 \\times 4 + 5 \\times 6 + \\cdots + 37 \\times 38 + 39$ and $B$ = $1 + 2 \\times 3 + 4 \\times 5 + \\cdots + 36 \\times 37 + 38 \\times 39$ are obtained by writing multiplication and addition operators in an alternating pattern between successive integers.  Find the positive difference between integers $A$ and $B$.",
+        "solutions": {
+            "1": "We have \\[|A-B|=|1+3(4-2)+5(6-4)+ \\cdots + 37(38-36)-39(1-38)|\\]\\[\\implies |2(1+3+5+7+ \\cdots +37)-1-39(37)|\\]\\[\\implies |361(2)-1-39(37)|=|722-1-1443|=|-722|\\implies \\boxed{722}\\]",
+            "2": "We see that\n$A=(1\\times 2)+(3\\times 4)+(5\\times 6)+\\cdots +(35\\times 36)+(37\\times 38)+39$\nand\n$B=1+(2\\times 3)+(4\\times 5)+(6\\times 7)+\\cdots +(36\\times 37)+(38\\times 39)$.\nTherefore,\n$B-A=-38+(2\\times 2)+(2\\times 4)+(2\\times 6)+\\cdots +(2\\times 36)+(2\\times 38)$\n$=-38+4\\times (1+2+3+\\cdots+19)$\n$=-38+4\\times\\frac{20\\cdot 19}{2}=-38+760=\\boxed{722}.$",
+            "3": "For those that aren't shrewd enough to recognize the above, we may use Newton's Little Formula to semi-bash the equations.\nWe write down the pairs of numbers after multiplication and solve each layer:\n\n\\[2, 12, 30, 56, 90...(39)\\]\n\\[6, 18, 26, 34...\\]\n\\[8, 8, 8...\\]\nand\n\\[(1) 6, 20, 42, 72...\\]\n\\[14, 22, 30...\\]\n\\[8, 8, 8...\\]\n\nThen we use Newton's Little Formula for the sum of $n$ terms in a sequence.\nNotice that there are $19$ terms in each sequence, plus the tails of $39$ and $1$ on the first and second equations, respectively.\n\nSo,\n\n\\[2\\binom{19}{1}+10\\binom{19}{2}+8\\binom{19}{3}+1\\]\n\n\\[6\\binom{19}{1}+14\\binom{19}{2}+8\\binom{19}{3}+39\\]\n\nSubtracting $A$ from $B$ gives:\n\n\\[4\\binom{19}{1}+4\\binom{19}{2}-38\\]\n\nWhich unsurprisingly gives us $\\boxed{722}.$"
+        }
+    },
+    {
+        "competition": "AIME",
+        "competition_id": "1987_AIME_Problems",
+        "problem_id": 298,
+        "difficulty": 4,
+        "problem": "What is the largest positive integer $n$ for which there is a unique integer $k$ such that $\\frac{8}{15} < \\frac{n}{n + k} < \\frac{7}{13}$?",
+        "solutions": {
+            "1": "Multiplying out all of the denominators, we get:\n\\begin{align*}104(n+k) &< 195n< 105(n+k)\\\\ 0 &< 91n - 104k < n + k\\end{align*}\nSince $91n - 104k < n + k$, $k > \\frac{6}{7}n$. Also, $0 < 91n - 104k$, so $k < \\frac{7n}{8}$. Thus, $48n < 56k < 49n$. $k$ is unique if it is within a maximum range of $112$, so $n = 112$.",
+            "2": "Flip all of the fractions for\n\\[\\begin{array}{ccccc}\\frac{15}{8} &>& \\frac{k + n}{n} &>& \\frac{13}{7}\\\\  105n &>& 56 (k + n)& >& 104n\\\\  49n &>& 56k& >& 48n\\end{array}\\]\nContinue as in Solution 1.",
+            "3": "Flip the fractions and subtract one from all sides to yield \\[\\frac{7}{8}>\\frac{k}{n}>\\frac{6}{7}.\\]  Multiply both sides by $56n$ to get \\[49n>56k>48n.\\] This is equivalent to find the largest value of $n$ such that there is only one multiple of 56 within the open interval between $48n$ and $49n$.  If $n=112,$ then $98>k>96$ and $k=97$ is the unique value. For $n\\geq 113,$ there is at least $(49\\cdot 113-48\\cdot 113)-1=112$ possible numbers for $k$ and there is one $k$ every 56 numbers. Hence, there must be at least two values of $k$ that work.  So, the largest value of $n$ is $\\boxed{112}$.",
+            "4": "Notice that in order for $k$ to be unique, $\\frac{n}{n + k+ 1} \\le \\frac{8}{15}$ and $\\frac{n}{n+ k-1} \\ge \\frac{7}{13}$ must be true. Solving these inequalities for $k$ yields $\\frac{7}{6}(k-1) \\le n \\le \\frac{8}{7}(k+1)$.\nThus, we want to find $k$ such that $\\frac{7}{6}(k-1)\\le \\frac{8}{7}(k+1)$. Solving this inequality yields $k \\le 97$, and plugging this into $\\frac{n}{n+k} < \\frac{7}{13}$ in the original equation yields $n \\le 112$ so the answer is $\\boxed{112}$."
+        }
+    },
+    {
+        "competition": "USAJMO",
+        "competition_id": "2010_USAJMO_Problems",
+        "problem_id": 399,
+        "difficulty": 6.5,
+        "problem": "Let $n > 1$ be an integer. Find, with proof, all sequences\n$x_1, x_2, \\ldots, x_{n-1}$ of positive integers with the following\nthree properties:\n(a). $x_1 < x_2 < \\cdots < x_{n-1}$;\n(b). $x_i + x_{n-i} = 2n$ for all $i=1,2,\\ldots,n-1$;\n(c). given any two indices $i$ and $j$ (not necessarily distinct) for which $x_i + x_j < 2n$, there is an index $k$ such that $x_i + x_j = x_k$.",
+        "solutions": {
+            "1": "The sequence is $2, 4, 6, \\ldots, 2n-2$.Let $n > 1$ be an integer. Find, with proof, all sequences\n$x_1, x_2, \\ldots, x_{n-1}$ of positive integers with the following\nthree properties:\n(a). $x_1 < x_2 < \\cdots < x_{n-1}$;\n(b). $x_i + x_{n-i} = 2n$ for all $i=1,2,\\ldots,n-1$;\n(c). given any two indices $i$ and $j$ (not necessarily distinct) for which $x_i + x_j < 2n$, there is an index $k$ such that $x_i + x_j = x_k$.The sequence is $2, 4, 6, \\ldots, 2n-2$.\nProof 1:\nWe will prove that any sequence $x_1, \\ldots, x_{n-1}$, that satisfies the given conditions, is an arithmetic progression with $x_1$ as both the first term and the increment. Once this is proved, condition (b) implies that $x_1 + x_{n-1} = x_1 + (n-1)x_1 = nx_1 = 2n$. Therefore $x_1 = 2$, and the sequence is just the even numbers from $2$ to $2n-2$. The sequence of successive even numbers clearly satisfies all three conditions, and we are done.\nFirst a degenerate case. If $n = 2$, there is only one element $x_1$, and condition (b) gives $x_1 + x_1 = 4$ or $x_1 = 2$. Conditions (a) and (c) are vacuously true.\nOtherwise, for $n > 2$, we will prove by induction on $m$ that the difference $x_{n-m} - x_{n-1-m} = x_1$ for all $m \\in [1, n-2]$, which makes all the differences $x_{n-1} - x_{n-2} = \\ldots = x_2 - x_1 = x_1$, i.e. the sequence is an arithmetic progression with $x_1$ as the first term and increment as promised.\nSo first the $m=1$ case. With $n > 2$, $x_{n-2}$ exists and is less than $x_{n-1}$ by condition (a). Now since by condition (b) $x_1 + x_{n-1} = 2n$, we conclude that $x_1 + x_{n-2} < 2n$, and therefore by condition (c) $x_1 + x_{n-2} = x_k$ for some $k$.  Now, since $x_1 > 0$, $x_k > x_{n-2}$ and can only be $x_{n-1}$.  So $x_1 + x_{n-2} = x_{n-1}$.\nNow for the induction step on all values of $m$. Suppose we have shown that for all $i \\le m$, $x_1 + x_{n-1-i} = x_{n-i}$.  If $m = n-2$ we are done, otherwise $m < n-2$, and by condition (c) $x_1 + x_{n-2-m} = x_k$ for some $k$. This $x_k$ is larger than $x_{n-2-m}$, but smaller than $x_1 + x_{n-1-m} = x_{n-m}$ by the inductive hypothesis. It then follows that $x_1 + x_{n-2-m} = x_{n-1-m}$, the only element of the sequence between $x_{n-2-m}$ and $x_{n-m}$. This establishes the result for $i=m+1$.\nSo, by induction $x_1 + x_{n-1-m} = x_{n-m}$ for all $m \\in [1, n-2]$, which completes the proof.\nProof 2:\nLet $S=\\{x_1,x_2,...,x_{n-1}\\}$. Notice that \\[x_1 < x_1+x_1 < x_1+x_2 < \\dots < x_1+x_{n-2} < 2n.\\]\nThen by condition (c), we must have $x_1,x_1+x_1,...,x_1+x_{n-2}\\in S$. This implies that $x_1=x_1,x_1+x_1=x_2,...,x_1+x_{n-2}=x_{n-1}$, or that $x_k=kx_1$. Then we have $x_1+x_{n-1}=n(x_1)=2n \\rightarrow x_1=2$, and the rest is trivial.",
+            "2": "The claim is that in this sequence, if there are $2$ elements $a,b$ where $a,b<n$, such that $\\gcd(a,b)=1$, then the sequence contains every number less than $2n$.\nProof: Let $a$ and $b$ be the numbers less than $n$ such that $\\gcd(a,b)=1$.\nWe take this sequence modulo $n$. This means that if $x_i$ is an element in this sequence then $-x_i$ is as well.\n$a,b,2n-a,2n-b$ are all elements in the sequence. Clearly, one of $2n-a+b$ and $2n-b+a$ is less than $2n$, which means that $\\pm (a-b)$ are in this sequence modulo $n$.\nNow we want to show every number is achievable. We have already established that $a$ and $b$ are relatively prime, so by euclidean algorithm, if we take the positive difference of $a'$ and $b'$ every time, we will get that $1$ is in our sequence. Then, we can simply add or subtract $1$ as many times from $a$ as desired to get every single number.\nWe have proved that there are no two numbers that can be relatively prime in our sequence, implying that no two consecutive numbers can be in this sequence. Because our sequence has $n-1$ terms, our sequence must be one of $2,4,6,..,2(n-1)$ or $1,3,5,...$, the latter obviously fails, so $2,4,6...2(n-1)$ is our only possible sequence.",
+            "3": "We can add $x_1$ to every expression in property (a) to get \\[2x_1<x_1+x_2<\\dots<x_1+x_{n-1}=2n.\\] Therefore, we have $n-2$ distinct (because all the $x_i$ are distinct) expressions of the form $x_1+x_i$ for $i = 1, 2, \\dots n-1$ that are all less than $2n$, which means these $n-2$ expressions are also equal to some $x_k$. \nNow, we have that the $x_i$ are all positive, so $x_1>0$. Adding $x_1$ to both sides, $2x_1>x_1$. Therefore, since the $n-2$ expressions are all at least $2x_1$, they have to be equal to $x_2, x_3, \\dots, x_{n-1}$.\nSince there are $n-2$ distinct expressions $x_1+x_i$ equal to $n-2$ distinct expressions $x_j$, we have that each $x_1+x_i$ is equal to one $x_j$. Using the orders of the $x_1+x_i$ and the $x_j$, we find that\n\\begin{align*} x_1+x_1 &= x_2 \\\\ x_1+x_2 &= x_3 \\\\ ...& \\\\ x_1+x_{n-2} &= x_{n-1}. \\end{align*}\nThis gives us\n\\begin{align*} x_1 &= x_1 \\\\ x_2 &= 2x_1 \\\\ x_3 &= 3x_1 \\\\ &\\text{ }...\\\\ x_{n-1} &= (n-1)x_1\\\\ \\end{align*}\nNow, we can use property (b) with $i=1$, so $x_1 + x_{n-1} = 2n$, which means $x_1 = 2$. This gives the sequence \\[\\boxed{2, 4, 6, \\dots, 2(n-1)}\\]"
+        }
+    }
+]
