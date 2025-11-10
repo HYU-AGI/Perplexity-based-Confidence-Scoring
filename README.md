@@ -50,14 +50,12 @@ python src/generation_and_feature_extraction.py --model_name "generation_model_n
 생성된 각 토큰에 대해,  
 이전 시점의 로짓(`logits`)을 `Softmax`로 변환해 확률 분포를 얻습니다.  
 그중 실제 생성된 토큰의 확률을 선택하고 로그를 취해 `log_prob`로 저장합니다.  
-즉,  $\text{log\_prob}(t_i) = \log P(t_i | t_{<i})$
+즉,  $\text{log}\textunderscore\text{prob}=\log P(t_i | t_{<i})$
 
 4️⃣ **Perplexity 계산**  
 모든 생성 토큰의 평균 로그 확률을 계산한 뒤, 이를 음수로 바꿔 지수화하여 perplexity를 구합니다.  
 
-$$
-\text{Perplexity} = e^{-\frac{1}{N} \sum_{i=1}^N \log P(t_i | t_{<i})}
-$$
+$\text{Perplexity}=\exp\Big({-\frac{1}{N}}\sum_{i=1}^N \log P(t_i | t_{<i})\Big)$
 
 Perplexity가 낮을수록 모델이 자신의 생성에 대해 높은 확신을 가진다는 의미입니다.
 
