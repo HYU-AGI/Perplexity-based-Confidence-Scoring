@@ -24,7 +24,7 @@ python src/generation_and_feature_extraction.py --model_name "generation_model_n
 ```
 
 ## 🧪 예시
-아래는 perplxtiry가 계산되어 저장된 최종 결과물 예시 `{output}/{dataset_name}/{model_name}.json` 입니다.
+아래는 perplexity가 계산되어 저장된 최종 결과물 예시 `{output}/{dataset_name}/{model_name}.json` 입니다.
 
 ```
 {
