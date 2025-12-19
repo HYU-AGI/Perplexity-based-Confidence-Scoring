@@ -10,12 +10,12 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
-## 💻 Usage Guide
-perplexity를 측정할 수학 문제 데이터셋을 준비합니다.
+## REF and TEST datasets are derived from the CreativeMath repository.
+REF: 29 problems selected from the CreativeMath dataset with consideration of problem difficulty.
 
-- `dataset_name`: REF / TEST / AMC / AIME / AHSME
-- `model_name`: Mathstral-7B / Deepseek-math-7b-rl / Qwen-2.5-math-7B / OpenMath2-Llama3.1-8B / OREAL-7B
-
+- TEST: The remaining 371 problems in CreativeMath, excluding those used for REF.
+- **AMC**, **AIME**, and **AHSME** datasets are obtained from the [HARP](https://github.com/aadityasingh/HARP) repository.
+- Problems that are part of the REF and TEST sets are excluded.
 ### Step 1. Generation & Step 2. Feature Extraction
 
 ```
