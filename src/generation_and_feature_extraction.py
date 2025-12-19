@@ -88,10 +88,10 @@ def main():
     
     model = ModelWrapper(args)
 
-    if args.dataset_name in ["REF", "TEST", "AMC, AIME", "AHSME"]:
+    if args.dataset_name in ["REF", "TEST", "AMC", "AIME", "AHSME"]:
         data_file = os.path.join(args.data_dir, f"{args.dataset_name}.json")
     else:
-        msg = f"Invalid dataset name '{args.dataset_name}'. Please choose from ['REF', 'TEST', 'AMC, AIME', 'AHSME']."
+        msg = f"Invalid dataset name '{args.dataset_name}'. Please choose from ['REF', 'TEST', 'AMC', 'AIME', 'AHSME']."
         logger.error(msg)
         raise ValueError(msg)
 
